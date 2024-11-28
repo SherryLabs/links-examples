@@ -1,6 +1,6 @@
 # SherryLinks Examples
 
-This repository is dedicated to creating examples of mini apps.
+This repository is dedicated to creating examples of mini apps. In order to learn more about sherry links please visit our [Docs](https://docs.getsherry.app/).
 
 ## Purpose
 
@@ -13,7 +13,8 @@ The repository is organized into the following main folders:
 ```
 ├── blockchain              # Contains smart contracts for mini apps
 ├── cloudflare              # Examples of mini apps using Cloudflare Workers
-├── web                     # Examples of mini apps using Next.js
+├── express                 # Examples of mini apps using ExpressJS
+├── next                    # Examples of mini apps using Next.js
 ├── LICENSE
 └── README.md
 ```
