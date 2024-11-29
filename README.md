@@ -13,7 +13,8 @@ The repository is organized into the following main folders:
 ```
 ├── blockchain              # Contains smart contracts for mini apps
 ├── cloudflare              # Examples of mini apps using Cloudflare Workers
-├── express                 # Examples of mini apps using ExpressJS
+├── express-ts              # Examples of mini apps using ExpressJS (TypeScript)
+├── express-js              # Examples of mini apps using ExpressJS
 ├── next                    # Examples of mini apps using Next.js
 ├── LICENSE
 └── README.md
