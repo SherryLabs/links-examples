@@ -15,3 +15,5 @@ Generate tsconfig.json
 ```shell
 ./node_modules/.bin/tsc --init
 ```
+
+`http://localhost:3000/api/`
