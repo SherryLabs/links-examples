@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { welcome } from "../controllers/home.controller";
+import { miniApp } from "../controllers/sherry.controller";
 
-class HomeRoutes {
+class SherryRoutes {
     public router: Router;
 
     constructor() {
@@ -10,8 +10,8 @@ class HomeRoutes {
     }
 
     private init(): void {
-        this.router.get('/', welcome);
+        this.router.get('/', miniApp);
     }
 }
 
-export default new HomeRoutes().router;
+export default new SherryRoutes().router;

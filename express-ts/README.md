@@ -10,6 +10,12 @@ Install dependencies
 yarn add express cors
 ```
 
+Install sherry sdk
+
+```shell
+yarn add @sherrylinks/sdk
+```
+
 Generate tsconfig.json
 
 ```shell

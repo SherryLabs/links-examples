@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { Request, Response } from 'express';
 import { Metadata, BlockchainActionMetadata, Abi, createMetadata, ValidatedMetadata } from "@sherrylinks/sdk"
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export function miniApp(req: Request, res: Response) {
     try {
         const abi: Abi = [
             {
@@ -23,7 +23,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
             label: "Click",
             contractAddress: "0x1234567890123456789012345678901234567890",
             contractABI: abi,
-            functionName: "setGreeting",
+            functionName: "greet",
             chainId: "avalanche",
         }
 
@@ -36,8 +36,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
         };
 
         const metadataResponse: ValidatedMetadata = createMetadata(metadata);
-        return NextResponse.json(metadataResponse, { status: 200 });
+        res.status(200).json(metadataResponse);
     } catch (error) {
-        return NextResponse.json(error, { status: 500 });
+        res.status(500).json(error);
     }
 }
