@@ -3,6 +3,6 @@ import sherryRoutes from "./sherry.routes";
 
 export default class Routes {
     constructor(app: Application) {
-        app.use('/api', sherryRoutes);
+        app.use('/api/mini-app', sherryRoutes);
     }
 }
