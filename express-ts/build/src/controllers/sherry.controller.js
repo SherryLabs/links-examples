@@ -1,9 +1,10 @@
-import { Request, Response } from 'express';
-import { Metadata, BlockchainActionMetadata, Abi, createMetadata, ValidatedMetadata } from "@sherrylinks/sdk"
-
-export function miniApp(req: Request, res: Response) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.miniApp = miniApp;
+const sdk_1 = require("@sherrylinks/sdk");
+function miniApp(req, res) {
     try {
-        const abi: Abi = [
+        const abi = [
             {
                 "inputs": [
                     {
@@ -17,27 +18,25 @@ export function miniApp(req: Request, res: Response) {
                 "stateMutability": "nonpayable",
                 "type": "function"
             }
-        ] as const
-
-        const action: BlockchainActionMetadata = {
+        ];
+        const action = {
             label: "Click",
             contractAddress: "0x1234567890123456789012345678901234567890",
             contractABI: abi,
-            functionName: "setGreeting",
+            functionName: "greet",
             chainId: "avalanche",
-        }
-
-        const metadata: Metadata = {
+        };
+        const metadata = {
             type: "action",
             icon: "https://your-domain.com/api/mini-app-image",
             title: "Hello, World!",
             description: "This is a mini app that greets the world.",
             actions: [action]
         };
-
-        const metadataResponse: ValidatedMetadata = createMetadata(metadata);
+        const metadataResponse = (0, sdk_1.createMetadata)(metadata);
         res.status(200).json(metadataResponse);
-    } catch (error) {
+    }
+    catch (error) {
         res.status(500).json(error);
     }
 }
