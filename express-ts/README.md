@@ -7,10 +7,10 @@ yarn add --dev typescript ts-node @types/node @types/express @types/cors
 Install dependencies
 
 ```shell
-yarn add express cors
+yarn add express cors nodemon
 ```
 
-Install sherry sdk
+Install Sherry sdk
 
 ```shell
 yarn add @sherrylinks/sdk
