@@ -1,6 +1,6 @@
 # Init Project
 
-Create a new project by using Hono and follow the steps.
+Create a new project by using [Hono](https://hono.dev/docs/) and follow the steps.
 
 ```shell
 yarn create hono
