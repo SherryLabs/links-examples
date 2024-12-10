@@ -18,6 +18,12 @@ npx create hono@latest
 npm install
 ```
 
+# Install Sherry SDK
+
+```shell
+yarn add @sherrylinks/sdk
+```
+
 # Init
 
 ```shell
@@ -27,6 +33,10 @@ npm run dev
 ```shell
 yarn dev
 ```
+
+# Verify Repsonse
+
+Open `http://localhost:8787/api/mini-app` in your browser.
 
 # Deploy to Cloudflare
 
